@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌴 家族旅遊 2025 ✈️ 洛杉磯 × 多倫多</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --maple: #C8102E;
+    --sky: #2563EB;
+    --sun: #F59E0B;
+    --ocean: #0EA5E9;
+    --forest: #16A34A;
+    --sand: #FEF3C7;
+    --night: #0F172A;
+    --warm: #FFF7ED;
+    --muted: #64748B;
+    --card-bg: #FFFFFF;
+    --border: #E2E8F0;
+    --radius: 16px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #F8FAFC;
+    color: #1E293B;
+    overflow-x: hidden;
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 24px 60px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #0F172A 0%, #1E3A5F 45%, #0C4A6E 100%);
+  }
+
+  .hero-stars {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 10% 15%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 40% 8%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 30%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 70% 18%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 90% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 50% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 78% 65%, rgba(255,255,255,0.4) 0%, transparent 100%);
+  }
+
+  .hero-plane {
+    position: absolute;
+    top: 18%;
+    font-size: 2.2rem;
+    animation: fly 12s linear infinite;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(255,220,100,0.6));
+  }
+
+  @keyframes fly {
+    0%   { left: -10%; transform: rotate(-5deg); }
+    100% { left: 110%; transform: rotate(-5deg); }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #FDE68A;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', 'Noto Serif TC', serif;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #BAE6FD;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+
+  .hero-flags {
+    font-size: 2rem;
+    margin-bottom: 28px;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+
+  .hero-info-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .hero-chip {
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #E0F2FE;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.45);
+    font-size: 0.78rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .scroll-arrow {
+    width: 22px; height: 22px;
+    border-right: 2px solid rgba(255,255,255,0.35);
+    border-bottom: 2px solid rgba(255,255,255,0.35);
+    transform: rotate(45deg);
+    animation: bounce 1.8s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%,100%{ transform:rotate(45deg) translateY(0) }
+    50%{ transform:rotate(45deg) translateY(6px) }
+  }
+
+  /* ====== OVERVIEW CARDS ====== */
+  .section { padding: 56px 20px; max-width: 760px; margin: 0 auto; }
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 0;
+  }
+  @media(min-width:500px){ .overview-grid { grid-template-columns: repeat(2,1fr); } }
+
+  .overview-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-left: 4px solid transparent;
+    transition: transform .2s, box-shadow .2s;
+    cursor: default;
+  }
+  .overview-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  .overview-card.la { border-color: #F59E0B; }
+  .overview-card.toronto { border-color: #C8102E; }
+  .overview-card.niagara { border-color: #0EA5E9; }
+  .overview-card.fly { border-color: #8B5CF6; }
+  .overview-card .oc-icon { font-size: 1.8rem; }
+  .overview-card .oc-title { font-weight: 700; font-size: 0.95rem; }
+  .overview-card .oc-sub { color: var(--muted); font-size: 0.8rem; }
+
+  /* ====== DAY NAV ====== */
+  .day-nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(248,250,252,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .day-nav-wrap::-webkit-scrollbar { display:none; }
+  .day-nav {
+    display: flex;
+    gap: 8px;
+    width: max-content;
+    margin: 0 auto;
+  }
+  .day-tab {
+    background: none;
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-family: 'Noto Sans TC', sans-serif;
+    cursor: pointer;
+    color: var(--muted);
+    white-space: nowrap;
+    transition: all .2s;
+  }
+  .day-tab:hover, .day-tab.active {
+    background: var(--sky);
+    border-color: var(--sky);
+    color: white;
+  }
+
+  /* ====== ITINERARY ====== */
+  .itinerary-section { padding: 16px 20px 48px; max-width: 760px; margin: 0 auto; }
+
+  .day-block {
+    margin-bottom: 44px;
+    scroll-margin-top: 80px;
+  }
+
+  .day-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .day-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+  }
+
+  .day-header.la-theme { background: linear-gradient(135deg,#FEF3C7,#FDE68A); }
+  .day-header.flight-theme { background: linear-gradient(135deg,#EDE9FE,#DDD6FE); }
+  .day-header.toronto-theme { background: linear-gradient(135deg,#FFE4E6,#FECDD3); }
+  .day-header.niagara-theme { background: linear-gradient(135deg,#DBEAFE,#BFDBFE); }
+  .day-header.island-theme { background: linear-gradient(135deg,#D1FAE5,#A7F3D0); }
+  .day-header.museum-theme { background: linear-gradient(135deg,#FEE2E2,#FCA5A5); }
+  .day-header.return-theme { background: linear-gradient(135deg,#F3F4F6,#E5E7EB); }
+
+  .day-num {
+    flex-shrink: 0;
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    line-height: 1;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .day-num small { font-size: 0.5rem; font-family: 'Noto Sans TC'; font-weight: 400; margin-top: 1px; }
+
+  .day-header-text h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .day-header-text .day-theme-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .day-header-text .day-date {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 2px;
+  }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 9px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #CBD5E1, #E2E8F0);
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 14px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -22px; top: 12px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 2.5px solid #CBD5E1;
+    z-index: 1;
+  }
+  .timeline-item.highlight::before { border-color: var(--sky); background: var(--sky); }
+  .timeline-item.food::before { border-color: var(--sun); background: var(--sun); }
+  .timeline-item.transport::before { border-color: #94A3B8; background: #94A3B8; }
+  .timeline-item.sleep::before { border-color: var(--forest); background: var(--forest); }
+
+  /* VENUE CARD (clickable) */
+  .venue-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    overflow: hidden;
+    transition: all .22s ease;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+  }
+  .venue-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    border-color: var(--sky);
+  }
+  .venue-card-inner {
+    display: flex;
+    gap: 0;
+  }
+  .venue-thumb {
+    width: 90px;
+    flex-shrink: 0;
+    background: #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+  .venue-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .venue-body {
+    padding: 12px 14px;
+    flex: 1;
+    min-width: 0;
+  }
+  .venue-type {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .venue-type.type-sight { color: var(--sky); }
+  .venue-type.type-food  { color: var(--sun); }
+  .venue-type.type-hotel { color: var(--forest); }
+  .venue-type.type-activity { color: var(--maple); }
+  .venue-name { font-weight: 700; font-size: 0.95rem; line-height: 1.3; margin-bottom: 4px; }
+  .venue-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+  .venue-time {
+    display: inline-block;
+    background: #F1F5F9;
+    color: #475569;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .venue-tap-hint {
+    font-size: 0.68rem;
+    color: var(--sky);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  /* simple item (transport, sleep) */
+  .simple-item {
+    background: #F8FAFC;
+    border-radius: 10px;
+    padding: 10px 14px;
+    border-left: 3px solid #E2E8F0;
+  }
+  .simple-item.transport { border-color: #94A3B8; }
+  .simple-item.sleep { border-color: var(--forest); }
+  .simple-item .si-time { font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-bottom: 3px; }
+  .simple-item .si-text { font-size: 0.85rem; font-weight: 500; }
+  .simple-item .si-sub  { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+  /* ====== MODAL ====== */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+  .modal {
+    background: white;
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90svh;
+    overflow-y: auto;
+    transform: translateY(30px);
+    transition: transform .3s cubic-bezier(.22,.87,.12,1);
+    -webkit-overflow-scrolling: touch;
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+
+  .modal-hero {
+    width: 100%; height: 200px;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg,#DBEAFE,#BAE6FD);
+  }
+  .modal-hero-emoji {
+    width: 100%; height: 160px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem;
+    background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+  }
+  .modal-body { padding: 22px 22px 32px; }
+  .modal-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--sky);
+    margin-bottom: 6px;
+  }
+  .modal-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .modal-desc {
+    color: #475569;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  .modal-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .modal-info-item {
+    background: #F8FAFC;
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .modal-info-item .mii-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+  .modal-info-item .mii-val { font-size: 0.85rem; font-weight: 600; }
+
+  .modal-tips {
+    background: #FEF9EC;
+    border-left: 3px solid var(--sun);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #78350F;
+    margin-bottom: 18px;
+  }
+  .modal-tips strong { display: block; margin-bottom: 4px; }
+
+  .modal-btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 11px 20px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .18s;
+    font-family: 'Noto Sans TC', sans-serif;
+    cursor: pointer;
+    border: none;
+  }
+  .modal-btn.primary { background: var(--sky); color: white; }
+  .modal-btn.primary:hover { background: #1D4ED8; }
+  .modal-btn.secondary { background: #F1F5F9; color: #334155; }
+  .modal-btn.secondary:hover { background: #E2E8F0; }
+  .modal-close-bar {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 14px 22px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F1F5F9;
+    z-index: 2;
+  }
+  .modal-close-bar span { font-size: 0.78rem; color: var(--muted); }
+  .modal-close-btn {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    border: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    color: #64748B;
+    transition: background .15s;
+  }
+  .modal-close-btn:hover { background: #E2E8F0; }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--night);
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    padding: 36px 20px;
+    font-size: 0.82rem;
+  }
+  footer .footer-emoji { font-size: 2rem; display: block; margin-bottom: 10px; }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+  /* ====== SECTION DIVIDER ====== */
+  .city-divider {
+    text-align: center;
+    padding: 32px 20px 0;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: white;
+    background: linear-gradient(135deg, #0F172A, #1E3A5F);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .city-divider.la-div { background: linear-gradient(135deg,#78350F,#B45309,#D97706); }
+  .city-divider.canada-div { background: linear-gradient(135deg,#7F1D1D,#B91C1C,#C8102E); }
+  .city-divider.return-div { background: linear-gradient(135deg,#1E3A5F,#1D4ED8,#0EA5E9); }
+  .city-divider-inner { position: relative; z-index: 1; padding-bottom: 32px; }
+  .city-divider-sub { font-size: 0.9rem; font-weight: 400; opacity: 0.8; margin-top: 6px; font-family: 'Noto Sans TC'; }
+  .city-divider-wave {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: -2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-plane, .scroll-arrow { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-stars"></div>
+  <div class="hero-plane">✈️</div>
+
+  <div class="hero-badge">Family Trip 2025</div>
+
+  <h1>洛杉磯 × 多倫多<br>家族親子旅遊</h1>
+  <p class="hero-subtitle">換日線的對面，最美的親子冒險</p>
+
+  <div class="hero-flags">🇺🇸 &nbsp; ✈️ &nbsp; 🇨🇦</div>
+
+  <div class="hero-info-row">
+    <div class="hero-chip">📅 2025年6月13日 – 6月23日</div>
+    <div class="hero-chip">🗓️ 共 11 天</div>
+    <div class="hero-chip">👨‍👩‍👧‍👦 一家四口</div>
+    <div class="hero-chip">🎒 Alyssa (8) + 小妹 (5)</div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>往下探索行程</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ====== OVERVIEW ====== -->
+<section class="section">
+  <div class="section-title">🗺️ 旅程總覽</div>
+  <p class="section-desc">橫跨美加兩國，三個城市，滿滿的親子回憶</p>
+  <div class="overview-grid">
+    <div class="overview-card la">
+      <div class="oc-icon">🌴</div>
+      <div class="oc-title">洛杉磯</div>
+      <div class="oc-sub">Day 1–2 &nbsp;·&nbsp; 加州陽光<br>Santa Monica · Griffith</div>
+    </div>
+    <div class="overview-card niagara">
+      <div class="oc-icon">🌊</div>
+      <div class="oc-title">尼加拉瀑布</div>
+      <div class="oc-sub">Day 4 &nbsp;·&nbsp; 世界奇景<br>遊船 · 小鎮風情</div>
+    </div>
+    <div class="overview-card toronto">
+      <div class="oc-icon">🍁</div>
+      <div class="oc-title">多倫多</div>
+      <div class="oc-sub">Day 3–7 &nbsp;·&nbsp; 楓葉之城<br>水族館 · CN Tower · 城堡</div>
+    </div>
+    <div class="overview-card fly">
+      <div class="oc-icon">✈️</div>
+      <div class="oc-title">飛行路線</div>
+      <div class="oc-sub">TPE → LAX → YYZ<br>→ LAX → TPE</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CITY DIVIDER: LA ====== -->
+<div class="city-divider la-div">
+  <div class="city-divider-inner">
+    🌴 洛杉磯
+    <div class="city-divider-sub">Los Angeles, California &nbsp;·&nbsp; Day 1 – Day 2</div>
+  </div>
+  <svg class="city-divider-wave" viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 Q300,0 600,20 Q900,40 1200,20 L1200,40 L0,40Z" fill="#F8FAFC"/>
+  </svg>
+</div>
+
+<!-- ====== ITINERARY ====== -->
+<div id="itinerary">
+
+<!-- DAY NAV -->
+<div class="day-nav-wrap">
+  <div class="day-nav">
+    <button class="day-tab" onclick="scrollToDay('day1')">Day 1</button>
+    <button class="day-tab" onclick="scrollToDay('day2')">Day 2</button>
+    <button class="day-tab" onclick="scrollToDay('day3')">Day 3</button>
+    <button class="day-tab" onclick="scrollToDay('day4')">Day 4</button>
+    <button class="day-tab" onclick="scrollToDay('day5')">Day 5</button>
+    <button class="day-tab" onclick="scrollToDay('day6')">Day 6</button>
+    <button class="day-tab" onclick="scrollToDay('day7')">Day 7</button>
+    <button class="day-tab" onclick="scrollToDay('day8')">Day 8</button>
+    <button class="day-tab" onclick="scrollToDay('day9')">返程</button>
+  </div>
+</div>
+
+<div class="itinerary-section">
+
+<!-- ======= DAY 1 ======= -->
+<div class="day-block" id="day1">
+  <div class="day-header la-theme">
+    <div class="day-num" style="color:#B45309;">1<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/13（六）</div>
+      <h2>✈️ 啟程與抵達天使之城</h2>
+      <div class="day-theme-label">跨越換日線，加州初體驗</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">20:00–23:30</div>
+        <div class="si-text">✈️ 台灣桃園機場 (TPE) 起飛</div>
+        <div class="si-sub">搭乘夜間航班啟程，跨越太平洋</div>
+      </div>
+    </div>
+
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">20:30（當地時間）</div>
+        <div class="si-text">🛬 抵達洛杉磯國際機場 (LAX)</div>
+        <div class="si-sub">通關 → 領行李 → 取車中心（約1小時）</div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('innout')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#FFFBEB;">🍔</div>
+          <div class="venue-body">
+            <div class="venue-type type-food">宵夜</div>
+            <div class="venue-name">In-N-Out Burger</div>
+            <div class="venue-desc">加州必吃！落地第一餐，得來速就能享受</div>
+            <div class="venue-time">22:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item sleep">
+      <div class="venue-card" onclick="openModal('home2suites')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#ECFDF5;">🏨</div>
+          <div class="venue-body">
+            <div class="venue-type type-hotel">住宿</div>
+            <div class="venue-name">Home2 Suites by Hilton El Segundo</div>
+            <div class="venue-desc">機場旁，治安良好，提供免費早餐</div>
+            <div class="venue-time">22:20 入住</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /day1 -->
+
+<!-- ======= DAY 2 ======= -->
+<div class="day-block" id="day2">
+  <div class="day-header la-theme">
+    <div class="day-num" style="color:#B45309;">2<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/14（日）</div>
+      <h2>🌴 洛杉磯會友與西岸陽光</h2>
+      <div class="day-theme-label">陽光沙灘、好友相聚與天文台夜景</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('santamonica')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Santa_Monica_Pier_at_Dusk.jpg/320px-Santa_Monica_Pier_at_Dusk.jpg" alt="Santa Monica Pier" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-sight">景點</div>
+            <div class="venue-name">Santa Monica Pier</div>
+            <div class="venue-desc">太平洋海灘、Pacific Park摩天輪，絕佳親子天堂</div>
+            <div class="venue-time">10:40–12:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item food">
+      <div class="venue-card" onclick="openModal('truefood')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#FEF9EC;">🥗</div>
+          <div class="venue-body">
+            <div class="venue-type type-food">午餐</div>
+            <div class="venue-name">True Food Kitchen</div>
+            <div class="venue-desc">健康美式料理，親子友善，與LA好友相聚敘舊</div>
+            <div class="venue-time">12:30–15:00</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('griffith')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/GriffithObservatory-Oct2006-2.jpg/320px-GriffithObservatory-Oct2006-2.jpg" alt="Griffith Observatory" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-sight">景點</div>
+            <div class="venue-name">Griffith Observatory</div>
+            <div class="venue-desc">俯瞰好萊塢標誌與LA市景，宇宙展覽啟蒙自然科學</div>
+            <div class="venue-time">16:00–18:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item food">
+      <div class="simple-item" style="border-color:var(--sun)">
+        <div class="si-time">19:00–20:00</div>
+        <div class="si-text">🍕 California Pizza Kitchen</div>
+        <div class="si-sub">美式披薩、義大利麵，晚餐安全牌</div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /day2 -->
+
+<!-- CITY DIVIDER: CANADA -->
+</div><!-- /itinerary-section (break for divider) -->
+<div class="city-divider canada-div">
+  <div class="city-divider-inner">
+    🍁 加拿大 · 多倫多
+    <div class="city-divider-sub">Toronto, Ontario &nbsp;·&nbsp; Day 3 – Day 7</div>
+  </div>
+  <svg class="city-divider-wave" viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 Q300,0 600,20 Q900,40 1200,20 L1200,40 L0,40Z" fill="#F8FAFC"/>
+  </svg>
+</div>
+<div class="itinerary-section">
+
+<!-- ======= DAY 3 ======= -->
+<div class="day-block" id="day3">
+  <div class="day-header flight-theme">
+    <div class="day-num" style="color:#5B21B6;">3<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/15（一）</div>
+      <h2>✈️ 飛往多倫多</h2>
+      <div class="day-theme-label">橫跨美洲大陸，降落楓葉國</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">07:30 – 08:30</div>
+        <div class="si-text">🚗 前往 LAX 還車、辦理登機</div>
+      </div>
+    </div>
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">10:00 – 17:30</div>
+        <div class="si-text">✈️ LAX → 多倫多皮爾遜機場 (YYZ)</div>
+        <div class="si-sub">飛行約5小時，多倫多快3小時（時差）</div>
+      </div>
+    </div>
+    <div class="timeline-item food">
+      <div class="venue-card" onclick="openModal('markham')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#F0FDF4;">🍜</div>
+          <div class="venue-body">
+            <div class="venue-type type-food">晚餐</div>
+            <div class="venue-name">First Markham Place 港式燒臘</div>
+            <div class="venue-desc">多倫多華人商圈，道地港式燒臘或中式麵食，撫慰亞洲胃</div>
+            <div class="venue-time">20:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item sleep">
+      <div class="venue-card" onclick="openModal('residenceinn')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#ECFDF5;">🏨</div>
+          <div class="venue-body">
+            <div class="venue-type type-hotel">住宿</div>
+            <div class="venue-name">Residence Inn Toronto Markham</div>
+            <div class="venue-desc">市郊套房飯店，停車方便，周邊超市齊全，連住5晚</div>
+            <div class="venue-time">20:00 入住</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /day3 -->
+
+<!-- ======= DAY 4 ======= -->
+<div class="day-block" id="day4">
+  <div class="day-header niagara-theme">
+    <div class="day-num" style="color:#0369A1;">4<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/16（二）</div>
+      <h2>🌊 尼加拉瀑布震撼體驗</h2>
+      <div class="day-theme-label">世界七大奇景與瀑布水花洗禮</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">09:30–11:30</div>
+        <div class="si-text">🚗 QEW 高速公路前往 Niagara Falls</div>
+        <div class="si-sub">車程約 1.5–2 小時</div>
+      </div>
+    </div>
+
+    <div class="timeline-item food">
+      <div class="venue-card" onclick="openModal('tablerockhouse')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Niagara_Falls_Table_Rock_Welcome_Centre.jpg/320px-Niagara_Falls_Table_Rock_Welcome_Centre.jpg" alt="Table Rock" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-food">午餐</div>
+            <div class="venue-name">Table Rock House Restaurant</div>
+            <div class="venue-desc">位在馬蹄瀑布邊緣，隔著玻璃邊用餐邊看瀑布，景色無敵</div>
+            <div class="venue-time">11:30–13:00</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('hornblower')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Niagara_Falls%2C_Hornblower_boat.jpg/320px-Niagara_Falls%2C_Hornblower_boat.jpg" alt="Hornblower" loading="lazy" onerror="this.parentElement.innerHTML='🚢'; this.parentElement.style.fontSize='2rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.parentElement.style.background='#DBEAFE'">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-activity">⭐ 必體驗</div>
+            <div class="venue-name">Hornblower Niagara Cruises 瀑布遊船</div>
+            <div class="venue-desc">穿上紅色雨衣直衝瀑布核心！轟隆水聲、巨型水花，孩子尖叫保證</div>
+            <div class="venue-time">13:30–15:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('notl')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Niagara-on-the-Lake_Courthouse.jpg/320px-Niagara-on-the-Lake_Courthouse.jpg" alt="Niagara-on-the-Lake" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-sight">景點</div>
+            <div class="venue-name">Niagara-on-the-Lake 濱湖小鎮</div>
+            <div class="venue-desc">19世紀英國風情優雅小鎮，必吃 Cows 冰淇淋！</div>
+            <div class="venue-time">16:00–17:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /day4 -->
+
+<!-- ======= DAY 5 ======= -->
+<div class="day-block" id="day5">
+  <div class="day-header toronto-theme">
+    <div class="day-num" style="color:#9F1239;">5<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/17（三）</div>
+      <h2>🦈 多倫多市區地標與海底世界</h2>
+      <div class="day-theme-label">漫步海底隧道與登高望遠</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('ripleys')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RipleysAquariumOfCanada.jpg/320px-RipleysAquariumOfCanada.jpg" alt="Ripley's Aquarium" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-activity">⭐ 必體驗</div>
+            <div class="venue-name">Ripley's Aquarium of Canada</div>
+            <div class="venue-desc">超長海底隧道看鯊魚從頭頂游過，觸摸池可以摸魟魚</div>
+            <div class="venue-time">10:30–13:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item food">
+      <div class="venue-card" onclick="openModal('recroom')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#FEF3C7;">🕹️</div>
+          <div class="venue-body">
+            <div class="venue-type type-food">午餐</div>
+            <div class="venue-name">The Rec Room</div>
+            <div class="venue-desc">結合超大遊樂場的餐廳！美式歡樂氣氛，親子同樂</div>
+            <div class="venue-time">13:30–14:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('cntower')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Toronto_-_ON_-_Toronto_Harbourfront7.jpg/240px-Toronto_-_ON_-_Toronto_Harbourfront7.jpg" alt="CN Tower" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-sight">景點</div>
+            <div class="venue-name">CN Tower 西恩塔</div>
+            <div class="venue-desc">高速電梯直達塔頂，踩在透明玻璃地板往下看，心跳加速！</div>
+            <div class="venue-time">15:00–16:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('stlawrence')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#FFF7ED;">🥩</div>
+          <div class="venue-body">
+            <div class="venue-type type-sight">景點 × 晚餐</div>
+            <div class="venue-name">St. Lawrence Market</div>
+            <div class="venue-desc">國家地理評選全球最佳食品市場，必吃 Peameal Bacon Sandwich</div>
+            <div class="venue-time">17:00–19:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /day5 -->
+
+<!-- ======= DAY 6 ======= -->
+<div class="day-block" id="day6">
+  <div class="day-header island-theme">
+    <div class="day-num" style="color:#065F46;">6<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/18（四）</div>
+      <h2>🍓 兒童遊樂島與夏日採果趣</h2>
+      <div class="day-theme-label">多倫多群島探險 × 季節限定草莓季</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('centreisland')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Toronto_Islands_Centreville_Amusement_Park.jpg/320px-Toronto_Islands_Centreville_Amusement_Park.jpg" alt="Centre Island" loading="lazy" onerror="this.parentElement.innerHTML='🎡'; this.parentElement.style.fontSize='2rem'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.parentElement.style.background='#D1FAE5'">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-activity">⭐ 必體驗</div>
+            <div class="venue-name">Centre Island × Centreville 遊樂園</div>
+            <div class="venue-desc">搭渡輪前往！復古旋轉木馬、小火車、天鵝船，5歲8歲完全適合</div>
+            <div class="venue-time">10:00–14:30</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('strawberry')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#FFF1F2;">🍓</div>
+          <div class="venue-body">
+            <div class="venue-type type-activity">季節限定</div>
+            <div class="venue-name">Downey's Strawberry Farm 採草莓</div>
+            <div class="venue-desc">6月中下旬正是安大略省草莓季！自己摘草莓、跳跳床、小動物區</div>
+            <div class="venue-time">16:00–18:00</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item food">
+      <div class="simple-item" style="border-color:var(--sun)">
+        <div class="si-time">18:30–20:00</div>
+        <div class="si-text">🥩 韓式燒肉或日本料理晚餐</div>
+        <div class="si-sub">Markham 一帶，犒賞豐富的一天</div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /day6 -->
+
+<!-- ======= DAY 7 ======= -->
+<div class="day-block" id="day7">
+  <div class="day-header museum-theme">
+    <div class="day-num" style="color:#9F1239;">7<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/19（五）</div>
+      <h2>🦕 博物館驚魂與古堡尋寶</h2>
+      <div class="day-theme-label">恐龍化石探秘 × 百年城堡冒險</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('rom')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/ROM_Crystal.jpg/320px-ROM_Crystal.jpg" alt="ROM" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-sight">景點</div>
+            <div class="venue-name">Royal Ontario Museum (ROM)</div>
+            <div class="venue-desc">水晶建築外觀，二樓恐龍館有真實暴龍與三角龍化石！互動裝置豐富</div>
+            <div class="venue-time">10:15–13:00</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="venue-card" onclick="openModal('casaloma')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="overflow:hidden;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Casa_Loma_Front.jpg/320px-Casa_Loma_Front.jpg" alt="Casa Loma" loading="lazy">
+          </div>
+          <div class="venue-body">
+            <div class="venue-type type-activity">⭐ 必體驗</div>
+            <div class="venue-name">Casa Loma 卡薩羅馬城堡</div>
+            <div class="venue-desc">北美唯一全尺寸城堡！地圖尋寶遊戲、神秘地下密道，孩子最愛</div>
+            <div class="venue-time">15:00–17:00</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item food">
+      <div class="venue-card" onclick="openModal('yorkdale')">
+        <div class="venue-card-inner">
+          <div class="venue-thumb" style="background:#F0F9FF;">🛍️</div>
+          <div class="venue-body">
+            <div class="venue-type type-food">購物 × 晚餐</div>
+            <div class="venue-name">Yorkdale Shopping Centre + Cheesecake Factory</div>
+            <div class="venue-desc">買 Roots、楓糖漿等伴手禮，晚餐在 The Cheesecake Factory 大吃一頓</div>
+            <div class="venue-time">17:30–20:00</div>
+            <div class="venue-tap-hint">👆 點選看詳情</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /day7 -->
+
+</div><!-- /itinerary-section -->
+
+<!-- CITY DIVIDER: RETURN -->
+<div class="city-divider return-div">
+  <div class="city-divider-inner">
+    ✈️ 返程
+    <div class="city-divider-sub">Day 8–11 &nbsp;·&nbsp; 洛杉磯中轉 → 回台灣</div>
+  </div>
+  <svg class="city-divider-wave" viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 Q300,0 600,20 Q900,40 1200,20 L1200,40 L0,40Z" fill="#F8FAFC"/>
+  </svg>
+</div>
+<div class="itinerary-section">
+
+<!-- ======= DAY 8 ======= -->
+<div class="day-block" id="day8">
+  <div class="day-header return-theme">
+    <div class="day-num" style="color:#374151;">8<small>DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/20（六）</div>
+      <h2>🛫 告別多倫多，洛杉磯中轉</h2>
+      <div class="day-theme-label">從容準備返程</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">13:00–15:30</div>
+        <div class="si-text">✈️ YYZ → LAX 班機</div>
+        <div class="si-sub">飛行約5小時，賺回3小時時差</div>
+      </div>
+    </div>
+    <div class="timeline-item food">
+      <div class="simple-item" style="border-color:var(--ocean)">
+        <div class="si-time">18:00–20:00</div>
+        <div class="si-text">🌊 Manhattan Beach 海邊晚餐</div>
+        <div class="si-sub">為北美之行畫下完美句點（視孩子狀況決定）</div>
+      </div>
+    </div>
+    <div class="timeline-item sleep">
+      <div class="simple-item sleep">
+        <div class="si-time">17:00 入住</div>
+        <div class="si-text">🏨 LAX 周邊飯店（Hilton LAX 或 Courtyard LAX）</div>
+        <div class="si-sub">隔天搭早班機回台，休息為重</div>
+      </div>
+    </div>
+  </div>
+</div><!-- /day8 -->
+
+<!-- ======= DAY 9-11 ======= -->
+<div class="day-block" id="day9">
+  <div class="day-header return-theme">
+    <div class="day-num" style="color:#374151; font-size:0.9rem;">9–11<small style="font-size:0.5rem">DAY</small></div>
+    <div class="day-header-text">
+      <div class="day-date">📅 6/21–6/23</div>
+      <h2>🏠 越過換日線，平安回家</h2>
+      <div class="day-theme-label">滿載回憶的返家之路</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item transport">
+      <div class="simple-item transport">
+        <div class="si-time">6/22（一）12:00</div>
+        <div class="si-text">✈️ LAX 搭乘長榮/華航班機回台</div>
+        <div class="si-sub">例如 長榮 BR05，日間航班可看電影、睡覺</div>
+      </div>
+    </div>
+    <div class="timeline-item sleep">
+      <div class="simple-item" style="border-color:var(--maple); background:linear-gradient(135deg,#FFF5F5,#FFF)">
+        <div class="si-time">6/23（二）16:30</div>
+        <div class="si-text">🎉 平安抵達桃園國際機場 (TPE)！</div>
+        <div class="si-sub">一家四口帶著滿滿回憶與加拿大草莓香，平安返家 🍓</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /itinerary-section -->
+</div><!-- /itinerary -->
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <span class="footer-emoji">🌏</span>
+  <strong style="color:white; font-size:1rem;">家族旅遊 2025 · 洛杉磯 × 多倫多</strong><br><br>
+  美好的旅行始於精心的規劃，<br>最珍貴的風景是家人在一起的笑臉。<br><br>
+  <span style="font-size:1.5rem;">🌴 🍁 🌊 🦕 🎡 🍓 ✈️</span>
+</footer>
+
+<!-- ====== MODALS ====== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal" id="modalContent">
+    <div class="modal-close-bar">
+      <span id="modalTag">景點資訊</span>
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalInner"></div>
+  </div>
+</div>
+
+<script>
+const modalData = {
+  innout: {
+    tag: '🍔 必吃美食',
+    title: 'In-N-Out Burger',
+    emoji: '🍔',
+    desc: '加州在地漢堡傳奇，新鮮現做、從不冷凍的牛肉漢堡，在台灣完全吃不到。最推薦「Double-Double」雙層牛肉起司堡，記得加點「Animal Style」（洋蔥炒過、特製醬）。深夜的得來速窗口就是加州獨特的旅行儀式。',
+    info: [
+      { label: '招牌餐點', val: 'Double-Double' },
+      { label: '隱藏菜單', val: 'Animal Style' },
+      { label: '價位', val: '單人約 $10 USD' },
+      { label: '適合', val: '全家大小' },
+    ],
+    tip: '💡 小秘訣：官網可查最近的分店，LAX周邊有好幾間。得來速排隊可能要等15–20分鐘，但非常值得！',
+    website: 'https://www.in-n-out.com',
+    map: 'https://maps.google.com/?q=In-N-Out+Burger+Los+Angeles',
+  },
+  home2suites: {
+    tag: '🏨 住宿',
+    title: 'Home2 Suites by Hilton El Segundo LAX',
+    emoji: '🏨',
+    desc: '緊鄰洛杉磯機場，步行即可搭乘飯店免費接駁車往返。El Segundo 治安良好，對於剛抵達的家庭非常安心。提供廚房設備與免費熱食早餐，是攜家帶眷的理想選擇。希爾頓系的 Home2 系列主打套房型空間，兩個孩子有充足的活動空間。',
+    info: [
+      { label: '早餐', val: '免費自助早餐' },
+      { label: '停車', val: '需另付費' },
+      { label: '機場接駁', val: '免費 Shuttle' },
+      { label: '品牌', val: 'Hilton 系列' },
+    ],
+    tip: '💡 建議提前在 Hilton 官網預訂，可用 Hilton Honors 點數，並選擇含早餐方案最划算。',
+    website: 'https://www.hilton.com/en/hotel-search/?query=home2+suites+el+segundo',
+    map: 'https://maps.google.com/?q=Home2+Suites+El+Segundo+LAX',
+  },
+  santamonica: {
+    tag: '🌴 景點',
+    title: 'Santa Monica Pier',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Santa_Monica_Pier_at_Dusk.jpg/800px-Santa_Monica_Pier_at_Dusk.jpg',
+    desc: '聖莫尼卡海灘碼頭是洛杉磯最具代表性的地標，橫跨太平洋的美麗海灘讓人心曠神怡。碼頭末端的 Pacific Park 遊樂園有全美唯一以太陽能驅動的摩天輪，顏色繽紛非常上相。帶孩子在沙灘踩水、堆沙堡，感受加州的陽光與海洋。',
+    info: [
+      { label: '開放時間', val: '全天（Pacific Park 另計）' },
+      { label: '入場費', val: '碼頭免費，遊樂園另計' },
+      { label: '停車', val: '周邊付費停車場' },
+      { label: '車程（LAX）', val: '約 30–40 分鐘' },
+    ],
+    tip: '💡 建議上午10點前到，人潮較少，陽光角度也最美。記得帶防曬乳和太陽眼鏡！',
+    website: 'https://www.santamonicapier.org',
+    map: 'https://maps.google.com/?q=Santa+Monica+Pier',
+  },
+  truefood: {
+    tag: '🥗 餐廳',
+    title: 'True Food Kitchen',
+    emoji: '🥗',
+    desc: '以「有益身心」為理念的健康美式餐廳，使用當季食材製作。菜單兼顧大人的健康需求和孩子的口味，設有兒童菜單。Santa Monica 的分店環境舒適寬敞，氣氛輕鬆，適合長途飛行後的聚餐。另一個選擇是 Bubba Gump Shrimp Co.，緊鄰碼頭、主題鮮明，孩子會很喜歡。',
+    info: [
+      { label: '類型', val: '健康美式 / 地中海' },
+      { label: '兒童菜單', val: '有' },
+      { label: '價位（人均）', val: '$25–$40 USD' },
+      { label: '預訂建議', val: '週末建議提前預訂' },
+    ],
+    tip: '💡 招牌推薦：Seasonal Harvest Bowl、Edamame Dumplings。素食及麩質敏感選項豐富。',
+    website: 'https://www.truefoodkitchen.com',
+    map: 'https://maps.google.com/?q=True+Food+Kitchen+Santa+Monica',
+  },
+  griffith: {
+    tag: '🔭 景點',
+    title: 'Griffith Observatory',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/GriffithObservatory-Oct2006-2.jpg/800px-GriffithObservatory-Oct2006-2.jpg',
+    desc: '格里菲斯天文台是洛杉磯的精神地標，建於1935年，俯瞰整座城市。對孩子來說，這裡的宇宙與星體互動展覽是絕佳的自然科學啟蒙。戶外的特斯拉線圈和宇宙展覽令人驚嘆。從天文台可以看到好萊塢標誌（Hollywood Sign）以及洛杉磯壯闊的城市夜景，是拍照的最佳地點。',
+    info: [
+      { label: '開放時間', val: '週二–五 12:00–22:00' },
+      { label: '週末', val: '10:00–22:00' },
+      { label: '入場費', val: '免費（天象儀另計）' },
+      { label: '車程（Santa Monica）', val: '約 45–60 分鐘' },
+    ],
+    tip: '💡 開車直達需在山腳停車再步行（約20分鐘上坡），建議下午3點後出發避開最熱時段。可在此看日落，景色美不勝收！',
+    website: 'https://griffithobservatory.org',
+    map: 'https://maps.google.com/?q=Griffith+Observatory+Los+Angeles',
+  },
+  markham: {
+    tag: '🍜 美食',
+    title: 'First Markham Place 華人商場',
+    emoji: '🏪',
+    desc: '多倫多 Markham 是北美最大的華人聚居社區之一，First Markham Place 是當地著名的亞裔購物中心。裡面有道地的港式燒臘、廣東粥品、台灣麵食，甚至有珍珠奶茶和台式小吃。對於剛從長途飛行降落的家庭來說，這裡是最能撫慰亞洲胃的地方，孩子們也能吃到熟悉的食物。',
+    info: [
+      { label: '位置', val: 'Markham, ON（YYZ車程30分）' },
+      { label: '類型', val: '亞裔購物中心' },
+      { label: '美食類型', val: '港式、台式、中式' },
+      { label: '停車', val: '免費大型停車場' },
+    ],
+    tip: '💡 建議順便在商場內的亞洲超市買一些台灣習慣的零食、泡麵和水果，備用於飯店宵夜。',
+    website: 'https://www.firstmarkhamplace.com',
+    map: 'https://maps.google.com/?q=First+Markham+Place+Markham+Ontario',
+  },
+  residenceinn: {
+    tag: '🏨 住宿',
+    title: 'Residence Inn Toronto Markham',
+    emoji: '🏨',
+    desc: 'Marriott 旗下的套房型飯店，專為長期住宿設計，每間客房都有廚房設備，可自行煮食，對家庭旅行非常實用。Markham 地區停車空間充裕，周邊超市、餐廳、商場一應俱全。作為多倫多5晚的大本營，交通方便，價格也比市中心合理。',
+    info: [
+      { label: '廚房設備', val: '有（全套）' },
+      { label: '免費早餐', val: '含（部分方案）' },
+      { label: '停車', val: '免費' },
+      { label: '到市中心', val: '約 30–40 分鐘' },
+    ],
+    tip: '💡 建議預訂兩房或大套房，5歲和8歲的孩子能有自己的睡眠空間。可利用 Marriott Bonvoy 點數升等！',
+    website: 'https://www.marriott.com/en-us/hotels/yyzrm-residence-inn-toronto-markham',
+    map: 'https://maps.google.com/?q=Residence+Inn+Toronto+Markham',
+  },
+  tablerockhouse: {
+    tag: '🍽️ 餐廳',
+    title: 'Table Rock House Restaurant',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Niagara_Falls_Table_Rock_Welcome_Centre.jpg/800px-Niagara_Falls_Table_Rock_Welcome_Centre.jpg',
+    desc: '全加拿大最獨特的用餐體驗之一——餐廳就位在馬蹄瀑布（Horseshoe Falls）的邊緣！巨大的落地玻璃窗將壯闊的瀑布盡收眼底，感受水氣的震撼。菜單以加拿大在地食材為主，從輕食到正餐都有。能邊用餐邊觀賞尼加拉瀑布，是絕對值得的餐廳體驗。',
+    info: [
+      { label: '類型', val: '加拿大料理' },
+      { label: '景觀', val: '馬蹄瀑布直面景觀' },
+      { label: '價位（人均）', val: 'CAD $30–$50' },
+      { label: '建議', val: '強烈建議提前訂位' },
+    ],
+    tip: '💡 訂位請提早至少2–3週，尤其6月旺季。建議指定「waterfall view」座位，視野最佳！',
+    website: 'https://www.niagaraparks.com/visit/dining/table-rock-house-restaurant',
+    map: 'https://maps.google.com/?q=Table+Rock+House+Restaurant+Niagara+Falls',
+  },
+  hornblower: {
+    tag: '🚢 必體驗活動',
+    title: 'Hornblower Niagara Cruises',
+    emoji: '🚢',
+    desc: '這是尼加拉瀑布最刺激、最難忘的體驗！搭上遊船，穿上發放的紅色雨衣（加拿大側的特色，美國側是藍色），緩緩駛向馬蹄瀑布的核心。轟隆隆的水聲震人心魄，數十萬升的水量就在你面前傾瀉而下，巨型水花撲面而來。這個體驗對5歲和8歲的孩子來說將是畢生難忘的震撼。',
+    info: [
+      { label: '票價（成人）', val: '約 CAD $30' },
+      { label: '票價（兒童）', val: '約 CAD $20' },
+      { label: '航程時間', val: '約 20 分鐘' },
+      { label: '雨衣', val: '現場免費提供' },
+    ],
+    tip: '💡 雖然雨衣會全程穿著，但建議穿涼爽快乾的衣服，鞋子也要防水。手機請放入防水袋！提前網路訂票可省排隊時間。',
+    website: 'https://www.niagaracruises.com',
+    map: 'https://maps.google.com/?q=Hornblower+Niagara+Cruises',
+  },
+  notl: {
+    tag: '🏘️ 景點',
+    title: 'Niagara-on-the-Lake 濱湖尼加拉',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Niagara-on-the-Lake_Courthouse.jpg/800px-Niagara-on-the-Lake_Courthouse.jpg',
+    desc: '離尼加拉瀑布約20分鐘車程的濱湖尼加拉，是一個充滿19世紀英國殖民風情的優雅小鎮。被譽為「加拿大最美麗的小鎮」，街道整潔，維多利亞式建築保存完好。小鎮以葡萄酒、冰酒聞名，也是 Shaw Festival 戲劇節的所在地。必吃的 Cows 冰淇淋是加拿大最著名的品牌，全家人分食一支絕對滿足！',
+    info: [
+      { label: '車程（瀑布）', val: '約 20 分鐘' },
+      { label: '必吃', val: 'Cows 冰淇淋' },
+      { label: '特色', val: '維多利亞式建築、葡萄酒' },
+      { label: '最佳時間', val: '下午輕鬆漫步' },
+    ],
+    tip: '💡 Cows 冰淇淋的 "COWNADIAN CRUNCH"（焦糖核桃）和 "WOWIE COWIE"（焦糖巧克力）是最受歡迎的口味，推薦！',
+    website: 'https://www.niagaraonthelake.com',
+    map: 'https://maps.google.com/?q=Niagara-on-the-Lake+Ontario',
+  },
+  ripleys: {
+    tag: '🦈 景點',
+    title: "Ripley's Aquarium of Canada",
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RipleysAquariumOfCanada.jpg/800px-RipleysAquariumOfCanada.jpg',
+    desc: '加拿大瑞普利水族館是北美最佳水族館之一，位在 CN Tower 旁邊。最吸引人的是全長97公尺的「危險瀉湖」海底隧道——站在移動步道上，鯊魚、海龜和魟魚就在你頭頂游過，震撼無比。觸摸池可以親手觸碰魟魚和馬蹄蟹，水母展示廳燈光夢幻如入異世界。對於5歲和8歲的孩子來說，這是多倫多最完美的親子景點。',
+    info: [
+      { label: '票價（成人）', val: '約 CAD $40' },
+      { label: '票價（兒童3-13）', val: '約 CAD $27' },
+      { label: '開放時間', val: '每日 09:00–20:00' },
+      { label: '建議遊覽時間', val: '2.5–3 小時' },
+    ],
+    tip: '💡 強烈建議提前網路訂票（官網買較便宜），現場購票可能排隊等候。觸摸池旁通常有工作人員說明，孩子可以放心體驗。',
+    website: 'https://www.ripleyaquariums.com/canada',
+    map: 'https://maps.google.com/?q=Ripley\'s+Aquarium+of+Canada+Toronto',
+  },
+  recroom: {
+    tag: '🕹️ 餐廳',
+    title: 'The Rec Room Toronto',
+    emoji: '🕹️',
+    desc: '多倫多最酷的娛樂餐廳，結合了超大型遊樂場（電子遊戲機、投籃機、保齡球等）和正式餐廳。食物以美式分享料理為主，非常適合家庭聚餐。孩子們可以一邊玩遊戲一邊等餐，大人也有充足的娛樂選項。就在 CN Tower 附近，與水族館是完美的一天組合。',
+    info: [
+      { label: '類型', val: '娛樂餐廳' },
+      { label: '遊戲', val: '電玩、投籃、保齡球' },
+      { label: '食物類型', val: '美式分享料理' },
+      { label: '位置', val: 'CN Tower 附近' },
+    ],
+    tip: '💡 可以預先購買遊戲點數卡，避免排隊。餐廳部分可預訂座位。',
+    website: 'https://therecroom.com/toronto-south',
+    map: 'https://maps.google.com/?q=The+Rec+Room+Toronto',
+  },
+  cntower: {
+    tag: '🗼 地標景點',
+    title: 'CN Tower 西恩塔',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Toronto_-_ON_-_Toronto_Harbourfront7.jpg/800px-Toronto_-_ON_-_Toronto_Harbourfront7.jpg',
+    desc: '高553公尺的西恩塔曾是全球最高建築，是多倫多最具代表性的地標。搭乘高速玻璃電梯（僅需58秒）直達 LookOut 觀景台，再往上到 Glass Floor（玻璃地板）——站在透明玻璃上往下俯瞰450公尺高空下的城市，是考驗膽量的刺激體驗。天氣好的日子甚至能看到尼加拉瀑布的水氣！',
+    info: [
+      { label: '票價（成人）', val: '約 CAD $43' },
+      { label: '票價（兒童4-13）', val: '約 CAD $28' },
+      { label: '開放時間', val: '每日 09:00–22:00' },
+      { label: '觀景高度', val: '447 公尺' },
+    ],
+    tip: '💡 票價含 LookOut、Glass Floor 及 SkyPod（最高觀景台）。建議下午3–5點前往，光線最適合拍照。若預算充裕，可加購 EdgeWalk（高空行走體驗）。',
+    website: 'https://www.cntower.ca',
+    map: 'https://maps.google.com/?q=CN+Tower+Toronto',
+  },
+  stlawrence: {
+    tag: '🥩 市場',
+    title: 'St. Lawrence Market',
+    emoji: '🥩',
+    desc: '1803年開幕的聖羅倫斯市場，被《國家地理雜誌》評選為全球最佳食品市場。市場分為南北兩棟，南館為新鮮食品、肉類、海鮮及熟食市場，北館為農夫市集（週六開放）。必吃的多倫多名物「Peameal Bacon Sandwich」——豌豆粉外裹的加拿大培根三明治，汁多鮮嫩。逛完市場在旁邊的 The Old Spaghetti Factory 用晚餐也是經典選擇，內部有真實的老式電車作為用餐包廂，孩子會驚呼連連。',
+    info: [
+      { label: '開放時間', val: '週二–六（南館）' },
+      { label: '必吃', val: 'Peameal Bacon Sandwich' },
+      { label: '車程（CN Tower）', val: '約 15 分鐘' },
+      { label: '入場費', val: '免費' },
+    ],
+    tip: '💡 Peameal Bacon Sandwich 在南館的 Carousel Bakery 攤位購買，排隊是常態，但絕對值得！週六有農夫市集，可以買到安大略省的新鮮蔬果。',
+    website: 'https://www.stlawrencemarket.com',
+    map: 'https://maps.google.com/?q=St.+Lawrence+Market+Toronto',
+  },
+  centreisland: {
+    tag: '🎡 景點',
+    title: 'Toronto Islands + Centreville',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Toronto_Islands_Centreville_Amusement_Park.jpg/800px-Toronto_Islands_Centreville_Amusement_Park.jpg',
+    desc: '多倫多群島就在市中心對面的湖中，搭乘短短15分鐘的渡輪即可抵達。船上可以拍到最完整的多倫多天際線（打卡必備）。中央島（Centre Island）上的 Centreville 是一座專為兒童打造的復古主題樂園——旋轉木馬、老式火車、老爺車、天鵝踩踏船，完全沒有讓大孩子也怕的刺激設施，5歲和8歲都能盡情玩耍。',
+    info: [
+      { label: '渡輪票（往返）', val: '成人 CAD $9 / 兒童 $5' },
+      { label: 'Centreville 入場', val: '免費（遊樂設施另計）' },
+      { label: '遊樂設施票券', val: '可購買全日票套餐' },
+      { label: '渡輪班次', val: '每30分鐘一班' },
+    ],
+    tip: '💡 Centreville 全日票套餐最划算，兩個孩子可以無限次搭乘所有設施。建議上午10點的首班渡輪出發，避開下午的人潮高峰。',
+    website: 'https://www.centreisland.ca',
+    map: 'https://maps.google.com/?q=Centre+Island+Toronto',
+  },
+  strawberry: {
+    tag: '🍓 季節活動',
+    title: "Downey's Farm 草莓採摘",
+    emoji: '🍓',
+    desc: '6月中下旬正是安大略省最著名的「草莓季」！Downey\'s Farm 是多倫多周邊知名的草莓農場，提供 Pick-Your-Own（自採草莓）體驗。全家人提著小籃子走進草莓田，自己摘下熟透的新鮮草莓，甜度比超市的高出許多。農場通常還附設大型充氣跳跳床、小動物觸摸區（可以摸小羊、小豬），是讓孩子留下最深刻自然記憶的活動之一。',
+    info: [
+      { label: '時間', val: '6月中至7月初（視草莓生長）' },
+      { label: '費用', val: '依採摘量計費（約 CAD $5–8/磅）' },
+      { label: '車程（多倫多市區）', val: '約 45 分鐘' },
+      { label: '附設設施', val: '跳跳床、小動物區' },
+    ],
+    tip: '💡 出發前建議先電話或查官網確認草莓是否進入採摘期，因為天氣影響很大。穿舊衣服、戴帽子，帶足防曬！採回來的草莓當晚做草莓冰淇淋最棒。',
+    website: 'https://www.downeysfarm.com',
+    map: 'https://maps.google.com/?q=Downey\'s+Farm+Ontario',
+  },
+  rom: {
+    tag: '🦕 博物館',
+    title: 'Royal Ontario Museum (ROM)',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/ROM_Crystal.jpg/800px-ROM_Crystal.jpg',
+    desc: '皇家安大略博物館是加拿大規模最大的博物館，外觀融合舊維多利亞建築與現代水晶玻璃延伸體，本身就是藝術品。館內最令孩子興奮的是2樓的「恐龍館」（James and Louise Temerty Galleries of the Age of Dinosaurs）——多具真實的暴龍、三角龍、迅猛龍化石一字排開，互動螢幕讓孩子了解恐龍知識。其他展廳涵蓋古埃及、古羅馬、加拿大原住民、珠寶礦石等，適合全家探索。',
+    info: [
+      { label: '票價（成人）', val: '約 CAD $23' },
+      { label: '票價（兒童3-14）', val: '約 CAD $14' },
+      { label: '開放時間', val: '週一–日 10:00–17:30' },
+      { label: '建議遊覽時間', val: '2.5 小時' },
+    ],
+    tip: '💡 8歲的 Alyssa 最適合從恐龍館開始，再逛世界文化展廳。博物館每週五晚間有「ROM Friday Night Live」成人活動，家庭不用擔心擁擠。官網可提前購票。',
+    website: 'https://www.rom.on.ca',
+    map: 'https://maps.google.com/?q=Royal+Ontario+Museum+Toronto',
+  },
+  casaloma: {
+    tag: '🏰 城堡',
+    title: 'Casa Loma 卡薩羅馬城堡',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Casa_Loma_Front.jpg/800px-Casa_Loma_Front.jpg',
+    desc: '建於1911年的 Casa Loma 是北美洲唯一保存完好的全尺寸中世紀城堡，由金融家 Sir Henry Pellatt 耗費350萬美金建造。城堡共有98個房間，包括巨大的宴會廳、秘密地下室、花園和馬廄。最讓孩子著迷的是「地下密道」——一條286公尺長的秘密通道連接城堡主體和馬廄，就像電影裡的冒險情節。博物館會發給訪客地圖，讓孩子自行探索，就像一場真實版的尋寶遊戲！',
+    info: [
+      { label: '票價（成人）', val: '約 CAD $35' },
+      { label: '票價（兒童4-13）', val: '約 CAD $20' },
+      { label: '開放時間', val: '每日 09:30–17:00' },
+      { label: '建議遊覽時間', val: '1.5–2 小時' },
+    ],
+    tip: '💡 務必挑戰走過全長286公尺的地下密道！城堡花園在夏季非常漂亮，適合拍照。提前在官網購票可省時省錢。',
+    website: 'https://casaloma.ca',
+    map: 'https://maps.google.com/?q=Casa+Loma+Toronto',
+  },
+  yorkdale: {
+    tag: '🛍️ 購物 × 餐廳',
+    title: 'Yorkdale Shopping Centre',
+    emoji: '🛍️',
+    desc: '多倫多最高端的購物中心，是加拿大奢侈品零售密度最高的商場。除了精品店，這裡也有很多加拿大本土品牌：Roots（加拿大海狸標誌的運動休閒品牌）是最具代表性的伴手禮，T恤、背包、拖鞋都很受歡迎。楓糖漿（Maple Syrup）在這裡的禮品店也有精裝版可以買。The Cheesecake Factory 就在商場內，菜單豐富（超過200道），份量巨大，是讓全家好好犒賞的美式晚餐！',
+    info: [
+      { label: '推薦品牌', val: 'Roots、Canada Goose、楓糖漿' },
+      { label: '晚餐推薦', val: 'The Cheesecake Factory' },
+      { label: '車程（ROM）', val: '約 15 分鐘' },
+      { label: '停車', val: '商場附設免費停車' },
+    ],
+    tip: '💡 加拿大的 GST/HST 稅率是13%，但台灣護照持有者在某些商店可申請退稅。Roots 的購物袋也是許多人的收藏品！',
+    website: 'https://www.yorkdale.com',
+    map: 'https://maps.google.com/?q=Yorkdale+Shopping+Centre+Toronto',
+  },
+};
+
+function openModal(id) {
+  const d = modalData[id];
+  if (!d) return;
+
+  document.getElementById('modalTag').textContent = d.tag;
+
+  let heroHtml = d.img
+    ? `<img class="modal-hero" src="${d.img}" alt="${d.title}" loading="lazy" onerror="this.style.display='none'">`
+    : `<div class="modal-hero-emoji">${d.emoji || '📍'}</div>`;
+
+  let infoGrid = '';
+  if (d.info && d.info.length) {
+    infoGrid = `<div class="modal-info-grid">` +
+      d.info.map(i => `<div class="modal-info-item"><div class="mii-label">${i.label}</div><div class="mii-val">${i.val}</div></div>`).join('') +
+    `</div>`;
+  }
+
+  let tipHtml = d.tip ? `<div class="modal-tips"><strong>📝 旅行小訣竅</strong>${d.tip}</div>` : '';
+
+  let btnHtml = `<div class="modal-btn-row">`;
+  if (d.website) btnHtml += `<a class="modal-btn primary" href="${d.website}" target="_blank" rel="noopener">🌐 官方網站</a>`;
+  if (d.map) btnHtml += `<a class="modal-btn secondary" href="${d.map}" target="_blank" rel="noopener">📍 Google Maps</a>`;
+  btnHtml += `</div>`;
+
+  document.getElementById('modalInner').innerHTML = `
+    ${heroHtml}
+    <div class="modal-body">
+      <div class="modal-tag">${d.tag}</div>
+      <div class="modal-title">${d.title}</div>
+      <p class="modal-desc">${d.desc}</p>
+      ${infoGrid}
+      ${tipHtml}
+      ${btnHtml}
+    </div>
+  `;
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOnBg(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+function scrollToDay(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  document.querySelectorAll('.day-tab').forEach((btn, i) => {
+    btn.classList.remove('active');
+  });
+  const days = ['day1','day2','day3','day4','day5','day6','day7','day8','day9'];
+  const idx = days.indexOf(id);
+  if (idx >= 0) document.querySelectorAll('.day-tab')[idx].classList.add('active');
+}
+
+// Intersection Observer for active tab
+const dayIds = ['day1','day2','day3','day4','day5','day6','day7','day8','day9'];
+const tabs = document.querySelectorAll('.day-tab');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      const idx = dayIds.indexOf(en.target.id);
+      if (idx >= 0) {
+        tabs.forEach(t => t.classList.remove('active'));
+        tabs[idx].classList.add('active');
+        tabs[idx].scrollIntoView({ behavior:'smooth', inline:'center', block:'nearest' });
+      }
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+
+dayIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) obs.observe(el);
+});
+</script>
+</body>
+</html>
